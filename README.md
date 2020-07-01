@@ -1,27 +1,40 @@
-# Unit 17 Nosql Homework: Workout Tracker
 
-For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
+# WorkoutTracker
 
-## User Story
+<img src="https://img.shields.io/badge/license-MIT-green" alt="License Badge">
+<img src="https://img.shields.io/github/repo-size/katjones23/WorkoutTracker" alt="Size Badge">
 
-* As a user, I want to be able to view, create, and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
 
-## Acceptance Criteria
+## Description 
 
-When the user loads the page, they should be given the option to create a new workout, or continue with their last workout.
+A daily workout tracker for creating new workouts, continuing existing ones, and viewing stats.  Built using MongoDB, Express, and Node.
 
-The user should be able to:
 
-  * Add exercises to a previous workout plan.
+## Table of Contents
 
-  * Add new exercises to a new workout plan.
+1. [Usage](#usage)
+1. [License](#license)
+1. [Contributing](#contributing)
+1. [Questions](#questions)
 
-  * View multiple the combined weight of multiple exercises on the `stats` page.
 
-## Submission on BCS
+## Usage 
 
-You are required to submit the following:
+[heroku link]
 
-* The URL to the deployed application
 
-* The URL to the Github repository
+## License
+
+Licensed under the MIT license.
+
+
+## Contributing
+
+Please submit a request to be a contributor
+
+
+## Questions
+
+<img src="https://avatars0.githubusercontent.com/u/53064219?v=4" alt="Avatar Image" width="100" height="100">
+
+If you have any questions, please contact me at <a href="mailto:thedevkat@gmail.com">thedevkat@gmail.com</a>.
