@@ -1,4 +1,4 @@
-const Workout = require("../models/workout");
+const Workout = require("../models/workoutModel");
 
 module.exports = function (app) {
     app.get("/api/workouts", function (req, res) {
@@ -12,10 +12,20 @@ module.exports = function (app) {
             });
     });
 
-    app.post("/api/workouts", function ({body}, res) {
+    app.post("/api/workouts", function (req, res) {
         Workout.create({
-            day: Date.now,
-            exercises: [body]
+            $push: {
+                exercises:
+                {
+                    type: req.body.type,
+                    name: req.body.name,
+                    distance: req.body.distance || null,
+                    duration: req.body.duration || null,
+                    weight: req.body.weight || null,
+                    sets: req.body.sets || null,
+                    reps: req.body.reps || null
+                }
+            }
         })
             .then(dbWorkout => {
                 res.json(dbWorkout);
@@ -26,20 +36,21 @@ module.exports = function (app) {
     });
 
     app.put("/api/workouts/:id", function (req, res) {
-        Workout.updateOne({ _id: req.params.id }, {
-            day: Date.now,
-            exercises: [
-                {
-                    type: req.body.type,
-                    name: req.body.name,
-                    distance: req.body.distance || null,
-                    duration: req.body.duration || null,
-                    weight: req.body.weight || null,
-                    sets: req.body.sets || null,
-                    reps: req.body.reps || null
+        Workout.update({ _id: req.params.id },
+            {
+                $push: {
+                    exercises:
+                    {
+                        type: req.body.type,
+                        name: req.body.name,
+                        distance: req.body.distance || null,
+                        duration: req.body.duration || null,
+                        weight: req.body.weight || null,
+                        sets: req.body.sets || null,
+                        reps: req.body.reps || null
+                    }
                 }
-            ]
-        })
+            })
             .then(dbWorkout => {
                 res.json(dbWorkout);
             })
