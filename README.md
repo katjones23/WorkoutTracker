@@ -20,7 +20,7 @@ A daily workout tracker for creating new workouts, continuing existing ones, and
 
 ## Usage 
 
-[heroku link]
+[Heroku App Link](https://kat-jones-workout-tracker.herokuapp.com/)
 
 
 ## License
